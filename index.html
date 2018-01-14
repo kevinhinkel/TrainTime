@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Time!</title>
+	<!-- BOOTSTRAP CSS -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+	<!-- BOOTSTRAP JS -->
+	<script rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- FIREBASE -->
+	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+	<!-- MOMENT JS -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="jumbotron jumbotron-fluid" style="background-color: #fcd200;">
+			<h1 class="text-center">DON'T MISS THAT TRAIN!</h1>
+				<h5 class="text-center">CHOO CHOO!</h5>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="card-header" style="background-color:  #fc8e00; color: black;">
+						<div class="card-block">
+							<h3 class="card-title"><strong>CURRENT TRAIN SCHEDULE</strong></h3>
+						</div>
+					<div class="card-body">
+						<table class="table table-hover" id="trainTable">
+							<thead>
+								<tr>
+									<th>Train Name</th>
+									<th>Destination</th>
+									<th>Frequencey (min)</th>
+									<th>Next Arrival</th>
+									<th>Minutes Away</th>		
+								</tr>
+							</thead>
+								<tbody>
+									<!-- LEAVE THIS EMPTY -->
+								</tbody>
+							</table>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row mt-3">
+			<div class="col-lg-12">
+				<div class="card-header" style="background-color:  #fc6900; color: black;">
+						<div class="card-block">
+							<h3 class="card-title"></h3>
+						</div>
+					
+					<div class="card-body">
+						<form>
+						<div class="form group">
+							<label for="">Train Name</label>
+							<input type="text" class="form-control" id="trainNameInput">
+						</div>
+						<div class="form group">
+							<label for="">Destination</label>
+							<input type="text" class="form-control" id="destinationInput">
+						</div>
+						<div class="form group">
+							<label for="">First Train Time (HH:mm - Military Time)</label>
+							<input type="text" class="form-control" id="firstTrainInput">
+						</div>
+						<div class="form group">
+							<label for="">Frequency (Min)</label>
+							<input type="text" class="form-control" id="frequencyInput">
+						</div>
+						<button type="submit" class="btn btn-primary mt-2" style="color: white" id="addTrainBtn">Submit!</button>	
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+<script src="assets/logic.js"></script>
+
+</body>
+</html>
